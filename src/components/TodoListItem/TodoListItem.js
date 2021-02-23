@@ -19,8 +19,9 @@ const TodoListItem = ({ listItem,index,todoListValues,setTodoListValues }) => {
   }
 
   const handleSave=()=>{
-      
-    if(currentText!=""){
+    
+    console.log(currentText.replace(/\s/g,''));  
+    if(currentText.replace(/\s/g,'')!==""){
     let clonedArr=[...todoListValues];
     clonedArr[index]=currentText;
     setTodoListValues(clonedArr);

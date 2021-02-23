@@ -3,7 +3,7 @@ import "./style.css"
 
 const AddTodo = ({todoListValues,setTodoListValues}) => {
     const handleAddTask=()=>{
-        !(newValue=="") && setTodoListValues([...todoListValues,newValue]);
+        !(newValue.replace(/\s/g,'')  =="") && setTodoListValues([...todoListValues,newValue]);
         setNewValue("");
 
     }
